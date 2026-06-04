@@ -1,8 +1,11 @@
 # Handoff: INAE Technology Conclave 2026 Website
 
 ## Overview
+<<<<<<< HEAD
 > **Last updated: May 2026** — reflects all design iterations including committee redesign, About Bhubaneswar slideshow, IIT Bhubaneswar branding, and Submission dropdown.
 
+=======
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 A complete multi-page conference website for the **2nd INAE Technology Conclave 2026**, organised by the Indian National Academy of Engineering (INAE) and hosted at SOA University, Bhubaneswar (11–12 July 2026). The site covers the full delegate journey: landing, about, speakers, programme, submissions, committee, venue/information, sponsorships, and contact.
 
 ---
@@ -118,16 +121,22 @@ Recreate the UI pixel-precisely in the target stack using its design system for 
 - Guidelines list below form
 
 **Google Drive integration note:**
+<<<<<<< HEAD
 **Google Drive folder:** `https://drive.google.com/drive/folders/17JOfg4yiuzrNspNDss96iOe16KJllOIa`
 
 The form `action` is currently `#`. To wire to Google Drive:
 1. Create a Google Apps Script Web App with a `doPost(e)` function that writes the uploaded file to the Drive folder above
+=======
+The form `action` is currently `#`. To wire to Google Drive:
+1. Create a Google Apps Script Web App with a `doPost(e)` function that writes the uploaded file to a Drive folder
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 2. Deploy and set the Web App URL as the form's `action` attribute
 3. The handler can also send confirmation emails via `MailApp.sendEmail()`
 
 ### 5. Committee (`committee.html`)
 **Purpose:** Show full leadership and sub-committee structure.
 
+<<<<<<< HEAD
 **Layout (redesigned — matches Speakers page style):**
 - Page hero
 - Section headers with full-width rule: `comm-section-title` (Playfair 600, 20px, `::after` line)
@@ -142,6 +151,23 @@ The form `action` is currently `#`. To wire to Google Drive:
 3. **Sub-Committees** — subsections: Finance & Sponsorship (4), Exhibition (4), Venue/Hospitality/Logistics (5), Registration & Publication (4), Media & Web/IT (3), Cultural (3)
 
 **Full member list:** see `committee.html` for all names, roles and institutions.
+=======
+**Layout:**
+- Page hero
+- Section headers with full-width rule (Playfair 600, 20px)
+- `auto-fill` grid of committee cards, `minmax(280px, 1fr)`
+- Each card has a left 3px accent bar (saffron), role label (uppercase 11.5px pink), member list
+- Each member: circular photo placeholder (54px, initials, gradient bg cycling purple/pink/orange) + name + title
+- Photo slot comment: `<!-- replace with: <img src="assets/committee/<slug>.jpg" /> -->`
+- **NO sponsors section** on this page
+
+**Committee structure:**
+- Chief Patrons: Prof. (Dr.) Manojranjan Nayak (SOA), Mr. J.D. Patil (INAE President)
+- Patrons: Prof. Damodar Acharya, Prof. Santanu Choudhury
+- General Chairs: Prof. Pradipta Kumar Nanda, Prof. Subhransu Ranjan Samantaray, Prof. Tapan Kumar Gandhi
+- Organizing Committee: 13 members (see HTML)
+- Program, Finance, Exhibition, Venue, Food, Accommodation, Registration, Publication, Media, Web, Cultural sub-committees (see HTML for full names)
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 
 ### 6. Information (`information.html`)
 **Purpose:** Venue, accommodation, and Bhubaneswar city guide via tabs.
@@ -149,6 +175,7 @@ The form `action` is currently `#`. To wire to Google Drive:
 **Tabs:**
 - **Venue** — OpenStreetMap iframe (SOA Auditorium, lat 20.28475, lng 85.77395) + address + travel info
 - **Accommodation** — 2 nearby hotels (Hotel Jayadeep, The Greenstar Inn Premium) as theme-cards
+<<<<<<< HEAD
 - **About Bhubaneswar** — auto-advancing photo slideshow (6 slides, 5s interval) + 3 info cards
 
 **About Bhubaneswar slideshow:**
@@ -167,6 +194,9 @@ The form `action` is currently `#`. To wire to Google Drive:
 - JS: vanilla, self-contained `<script>` block within the panel
 
 **3 info cards below slideshow:** Heritage & Temples | Knowledge Hub | Day Trips
+=======
+- **Adda** — 3 city-guide cards (Heritage, Cuisine, Side Trips) + definition of "adda"
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 
 ### 7. Sponsorships (`sponsorships.html`)
 **Purpose:** Placeholder — sponsorship tiers TBA.
@@ -187,7 +217,11 @@ The form `action` is currently `#`. To wire to Google Drive:
 
 **Contact details:**
 - Email: technologyconclave@inae.in
+<<<<<<< HEAD
 - Phone: 011-26582475
+=======
+- Phone: +91-11-2685-8025
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 - INAE HQ: Technology Bhavan, New Mehrauli Road, New Delhi 110016
 - SOA: SUM Hospital Road, Kalinganagar, Bhubaneswar 751029
 
@@ -196,15 +230,20 @@ The form `action` is currently `#`. To wire to Google Drive:
 ## Navigation Structure
 All pages share the same sticky navbar and footer.
 
+<<<<<<< HEAD
 **Nav links (in order):** Home | Speakers | Program | Call ▾ | Submission ▾ | Committee | Information ▾ | Sponsorships | Contact
 
 **Nav brand logos (left to right):** IIT Bhubaneswar → INAE → SOA University (dividers between each)
+=======
+**Nav links (in order):** Home | Speakers | Program | Call ▾ | Submission | Committee | Information ▾ | Sponsorships | Contact
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 
 **Call dropdown (PDF links, placeholders):**
 - Extended Abstracts → `assets/calls/extended-abstracts.pdf`
 - Posters → `assets/calls/posters.pdf`
 - Startup Display → `assets/calls/startup-display.pdf`
 
+<<<<<<< HEAD
 **Submission dropdown:**
 - General Instructions → `assets/calls/general-instructions.pdf` *(PDF to be uploaded)*
 - Submit Online → `submission.html`
@@ -213,6 +252,12 @@ All pages share the same sticky navbar and footer.
 - Venue → `information.html#venue`
 - Accommodation → `information.html#accommodation`
 - About Bhubaneswar → `information.html#bhubaneswar`
+=======
+**Information dropdown:**
+- Venue → `information.html#venue`
+- Accommodation → `information.html#accommodation`
+- Adda → `information.html#adda`
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 
 **No Register button in nav.**
 
@@ -349,16 +394,23 @@ linear-gradient(135deg, #3D1A5E 0%, #4E2376 50%, #6A38A0 100%)
 | File | Description |
 |------|-------------|
 | `assets/bg/neural-bg.jpeg` | Neural network illustration — hero background image |
+<<<<<<< HEAD
 | `assets/logos/inae.jpg` | INAE logo — navbar (2nd position), footer |
 | `assets/logos/soa.webp` | SOA University logo — navbar (3rd position), footer |
 | `assets/logos/iit-bhubaneswar-logo.png` | IIT Bhubaneswar logo — navbar (**1st position**), footer, host strip |
 | `assets/logos/iit-bhubaneswar.png` | IIT Bhubaneswar logo (original host strip version) |
+=======
+| `assets/logos/inae.jpg` | INAE logo (use in navbar + footer) |
+| `assets/logos/soa.webp` | SOA University logo (use in navbar + footer) |
+| `assets/logos/iit-bhubaneswar.png` | IIT Bhubaneswar logo (host strip) |
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 | `assets/logos/csir-immt.png` | CSIR-IMMT logo (host strip) |
 | `assets/logos/niser.png` | NISER Bhubaneswar logo (host strip) |
 | `assets/logos/ict-ioc.png` | ICT-IOC Bhubaneswar logo (host strip) |
 | `assets/logos/ieee.jpg` | IEEE Bhubaneswar Section logo (host strip) |
 | `assets/logos/aic-soa.png` | AIC-SOA Foundation logo (host strip) |
 | `assets/photos/soa1.webp` | SOA University campus photo (venue section) |
+<<<<<<< HEAD
 | `assets/photos/tc2025-2.jpg` | Technology Conclave 2025 photo (past banner on home page) |
 | `assets/photos/bbsr-image7.jpeg` | Lingaraj Temple — slide 1 |
 | `assets/photos/bbsr-image8.jpeg` | Lingaraj Temple complex aerial — slide 2 |
@@ -367,6 +419,11 @@ linear-gradient(135deg, #3D1A5E 0%, #4E2376 50%, #6A38A0 100%)
 | `assets/photos/bbsr-image6.jpeg` | Konark east entrance — slide 5 |
 | `assets/photos/bbsr-image5.jpeg` | Konark chariot wheel — slide 6 |
 | `assets/calls/general-instructions.pdf` | General Instructions PDF — **to be uploaded** |
+=======
+| `assets/photos/tc2025-1.jpg` | Technology Conclave 2025 at IIT Bombay (about callout) |
+| `assets/photos/tc2025-2.jpg` | Technology Conclave 2025 photo 2 (past banner) |
+| `assets/photos/tc2025-3.jpeg` | Technology Conclave 2025 photo 3 |
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 | `assets/committee/<slug>.jpg` | Committee member photos — **placeholder slots** in HTML; drop images here |
 | `assets/calls/extended-abstracts.pdf` | Call for Extended Abstracts PDF — **placeholder link** |
 | `assets/calls/posters.pdf` | Call for Posters PDF — **placeholder link** |
@@ -389,6 +446,7 @@ linear-gradient(135deg, #3D1A5E 0%, #4E2376 50%, #6A38A0 100%)
 | `register.html` | Registration page |
 | `styles.css` | All styles (tokens + layout + responsive + animations) |
 | `script.js` | Countdown, neural canvas, tabs, form handlers, reveal animations |
+<<<<<<< HEAD
 | `components.js` | **Shared header + footer** — single source of truth for nav and footer across all pages. Each HTML page has `<div id="site-header"></div>` and `<div id="site-footer"></div>` placeholders that this script fills at runtime. Edit nav/footer only here. Social links (LinkedIn, Twitter/X, YouTube, email) are defined as constants at the top of this file. |
 
 ## Shared Component Architecture
@@ -411,6 +469,8 @@ const SOCIAL = {
   email:    'mailto:technologyconclave@inae.in',
 };
 ```
+=======
+>>>>>>> d9f9a5a361fa8a29fcd26b2184508a2720633a07
 
 ---
 
