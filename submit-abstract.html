@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit Extended Abstract - INAE Technology Conclave 2026</title>
+  <link rel="icon" type="image/jpeg" href="assets/logos/inae.jpg" />
+  <meta name="description"
+    content="Submit your extended abstract proposal for the 2nd INAE Technology Conclave 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero neural-hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <canvas class="neural-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="page-hero-inner">
+      <div class="hero-kicker">
+        <span class="dot"></span>
+        <span>11-12 July 2026 &middot; SOA University, Bhubaneswar</span>
+      </div>
+      <h1>Submit Extended Abstract</h1>
+      <p>Submit your extended abstract for the 2nd INAE Technology Conclave 2026.
+        All submissions will be acknowledged and notified by 5 July 2026.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="reveal" style="max-width:760px;margin:0 auto 32px;text-align:center">
+        <div class="eyebrow" style="justify-content:center"><span class="bar"></span>Submission Form</div>
+        <h2 class="h2" style="font-size:32px">Upload your abstract</h2>
+        <p class="section-lead" style="margin:0 auto">Complete the form below and attach your PDFs. Submissions are
+          reviewed by the INAE Technology Conclave 2026 Program Committee.</p>
+      </div>
+
+      <form class="form-grid reveal" id="submitForm" novalidate data-ajax-submit="true">
+
+        <!-- Row 1: Name + Email -->
+        <div class="form-row two">
+          <div>
+            <label for="f-name">Full Name<span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name"
+              placeholder="Prof. / Dr. / Mr. / Ms. ..." />
+          </div>
+          <div>
+            <label for="f-email">Email ID<span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" required autocomplete="email"
+              placeholder="you@institution.ac.in" />
+          </div>
+        </div>
+
+        <!-- Row 2: Phone + Affiliation -->
+        <div class="form-row two">
+          <div>
+            <label for="f-phone">Contact Number<span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" required autocomplete="tel" placeholder="+91 ..." />
+          </div>
+          <div>
+            <label for="f-affil">Affiliation<span class="req">*</span></label>
+            <input type="text" id="f-affil" name="affiliation" required
+              placeholder="Institute / Company / Department" />
+          </div>
+        </div>
+
+        <!-- Discipline -->
+        <div class="form-row">
+          <label for="f-discipline">Discipline<span class="req">*</span></label>
+          <select id="f-discipline" name="discipline" required
+            style="font-family:var(--sans);font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:5px;padding:12px 14px;width:100%">
+            <option value="">Select discipline &hellip;</option>
+            <option>Civil Engineering</option>
+            <option>Computer Science and IT Engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Chemical Engineering</option>
+            <option>Electrical Engineering</option>
+            <option>Electronics and Communication Engineering</option>
+            <option>Aerospace Engineering</option>
+            <option>Mining, Metallurgical and Material Engineering</option>
+            <option>Energy Engineering</option>
+            <option>Interdisciplinary and Special Engineering Fields Engineering</option>
+          </select>
+        </div>
+
+        <!-- Submission Title -->
+        <div class="form-row">
+          <label for="f-title">Submission Title<span class="req">*</span></label>
+          <input type="text" id="f-title" name="title" required placeholder="Title of your abstract" />
+        </div>
+
+        <!-- Abstract PDF -->
+        <div class="form-row">
+          <label>Extended Abstract (PDF)<span class="req">*</span></label>
+          <div class="file-drop" id="abstractDrop" tabindex="0" role="button" aria-label="Upload abstract PDF">
+            <i class="fa-regular fa-file-pdf"></i>
+            <div class="fd-title" id="abstractTitle">Click to browse or drop a PDF here</div>
+            <div class="fd-hint" id="abstractHint">PDF only &middot; up to 25 MB</div>
+            <input type="file" id="f-abstract" name="abstract" accept="application/pdf,.pdf" required />
+          </div>
+        </div>
+
+        <!-- Payment / Refund section -->
+        <div class="form-row">
+          <div style="font-size:13.5px;color:var(--ink-2);line-height:1.6;
+                      background:var(--surface,#f8f8f8);border-left:3px solid var(--pink);
+                      padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:4px;">
+            For reserving a seat at the conclave, applicants need to deposit a refundable amount of
+            <strong>Rs.&nbsp;500/-</strong> on the
+            <a href="https://eazypay.icicibank.com/eazypayLink?P1=L2OUCAAHoiObsezHDAqYYQ==" target="_blank"
+              rel="noopener" style="color:var(--pink);font-weight:600;">Payment portal</a>.
+            This amount shall be refunded on completion of the conclave. Please provide your bank
+            account details below for processing the refund.
+          </div>
+        </div>
+
+        <!-- Bank Details -->
+        <div class="form-row two">
+          <div>
+            <label for="f-beneficiary">Beneficiary Name<span class="req">*</span></label>
+            <input type="text" id="f-beneficiary" name="beneficiaryName" required
+              placeholder="Account holder's full name" />
+          </div>
+          <div>
+            <label for="f-account">Account Number<span class="req">*</span></label>
+            <input type="text" id="f-account" name="accountNumber" required placeholder="Bank account number" />
+          </div>
+          <div>
+            <label for="f-bank">Name of the Bank<span class="req">*</span></label>
+            <input type="text" id="f-bank" name="bankName" required placeholder="e.g. State Bank of India" />
+          </div>
+          <div>
+            <label for="f-ifsc">IFSC Code<span class="req">*</span></label>
+            <input type="text" id="f-ifsc" name="ifscCode" required placeholder="e.g. SBIN0001234" maxlength="11" />
+          </div>
+          <div>
+            <label for="f-txn">Transaction ID<span class="req">*</span></label>
+            <input type="text" id="f-txn" name="transactionId" required placeholder="Transaction / UTR number" />
+          </div>
+        </div>
+
+        <!-- Payment Receipt PDF -->
+        <div class="form-row">
+          <label>Payment Receipt (PDF)<span class="req">*</span></label>
+          <div class="file-drop" id="receiptDrop" tabindex="0" role="button" aria-label="Upload payment receipt PDF">
+            <i class="fa-regular fa-file-pdf"></i>
+            <div class="fd-title" id="receiptTitle">Click to browse or drop a PDF here</div>
+            <div class="fd-hint" id="receiptHint">PDF only &middot; up to 25 MB</div>
+            <input type="file" id="f-receipt" name="receipt" accept="application/pdf,.pdf" required />
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <div class="note"></div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i>Submit
+          </button>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <i class="fa-solid fa-circle-check"></i>
+          <div><strong>Submission received.</strong> We will notify you by 5 July 2026.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-storage.js";
+
+    // ── PASTE YOUR firebaseConfig HERE ───────────────────────────────────────
+    const firebaseConfig = {
+      apiKey: "PASTE_YOUR_API_KEY",
+      authDomain: "PASTE_YOUR_AUTH_DOMAIN",
+      projectId: "PASTE_YOUR_PROJECT_ID",
+      storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
+      messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
+      appId: "PASTE_YOUR_APP_ID"
+    };
+    // ─────────────────────────────────────────────────────────────────────────
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+
+    // ── File-drop UI ─────────────────────────────────────────────────────────
+    function initDrop(dropEl, inputEl, titleEl, hintEl) {
+      function show(file) {
+        if (!file) return;
+        const isPDF = file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf");
+        if (!isPDF) {
+          titleEl.textContent = "PDF only — please choose a .pdf file";
+          hintEl.textContent = file.name;
+          dropEl.classList.remove("has-file");
+          return;
+        }
+        titleEl.textContent = file.name;
+        hintEl.textContent = "Ready (" + (file.size / 1048576).toFixed(2) + " MB)";
+        dropEl.classList.add("has-file");
+      }
+      dropEl.addEventListener("click", () => inputEl.click());
+      inputEl.addEventListener("change", e => show(e.target.files[0]));
+      ["dragenter", "dragover"].forEach(ev =>
+        dropEl.addEventListener(ev, e => { e.preventDefault(); dropEl.classList.add("dragover"); }));
+      ["dragleave", "drop"].forEach(ev =>
+        dropEl.addEventListener(ev, e => { e.preventDefault(); dropEl.classList.remove("dragover"); }));
+      dropEl.addEventListener("drop", e => {
+        const f = e.dataTransfer.files?.[0];
+        if (f) { inputEl.files = e.dataTransfer.files; show(f); }
+      });
+      dropEl.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); inputEl.click(); }
+      });
+    }
+
+    initDrop(
+      document.getElementById("abstractDrop"),
+      document.getElementById("f-abstract"),
+      document.getElementById("abstractTitle"),
+      document.getElementById("abstractHint")
+    );
+    initDrop(
+      document.getElementById("receiptDrop"),
+      document.getElementById("f-receipt"),
+      document.getElementById("receiptTitle"),
+      document.getElementById("receiptHint")
+    );
+
+    // ── Upload a PDF to Firebase Storage, return download URL ────────────────
+    async function uploadPDF(file, folder) {
+      const safeName = Date.now() + "_" + file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const fileRef = ref(storage, folder + "/" + safeName);
+      await uploadBytes(fileRef, file);
+      return await getDownloadURL(fileRef);
+    }
+
+    // ── Submit handler ────────────────────────────────────────────────────────
+    document.getElementById("submitForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const abstractFile = document.getElementById("f-abstract").files[0];
+      const receiptFile = document.getElementById("f-receipt").files[0];
+      const submitBtn = document.getElementById("submitBtn");
+
+      // Validate files
+      if (!abstractFile) {
+        const d = document.getElementById("abstractDrop");
+        d.style.borderColor = "var(--pink)";
+        document.getElementById("abstractTitle").textContent = "Please attach your abstract PDF";
+        return;
+      }
+      if (!receiptFile) {
+        const d = document.getElementById("receiptDrop");
+        d.style.borderColor = "var(--pink)";
+        document.getElementById("receiptTitle").textContent = "Please attach your payment receipt PDF";
+        return;
+      }
+      if (abstractFile.size > 25 * 1024 * 1024) { alert("Abstract PDF exceeds 25 MB"); return; }
+      if (receiptFile.size > 25 * 1024 * 1024) { alert("Receipt PDF exceeds 25 MB"); return; }
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Uploading…';
+
+      try {
+        // Upload both PDFs in parallel
+        const [abstractURL, receiptURL] = await Promise.all([
+          uploadPDF(abstractFile, "abstracts"),
+          uploadPDF(receiptFile, "receipts")
+        ]);
+
+        // Save form data + PDF links to Firestore
+        await addDoc(collection(db, "abstract-submissions"), {
+          submittedAt: new Date().toISOString(),
+          name: document.getElementById("f-name").value.trim(),
+          email: document.getElementById("f-email").value.trim(),
+          phone: document.getElementById("f-phone").value.trim(),
+          affiliation: document.getElementById("f-affil").value.trim(),
+          discipline: document.getElementById("f-discipline").value,
+          submissionTitle: document.getElementById("f-title").value.trim(),
+          beneficiaryName: document.getElementById("f-beneficiary").value.trim(),
+          accountNumber: document.getElementById("f-account").value.trim(),
+          bankName: document.getElementById("f-bank").value.trim(),
+          ifscCode: document.getElementById("f-ifsc").value.trim(),
+          transactionId: document.getElementById("f-txn").value.trim(),
+          abstractPDF: abstractURL,
+          receiptPDF: receiptURL
+        });
+
+        // Success
+        document.getElementById("formSuccess").style.display = "flex";
+        document.getElementById("submitForm").reset();
+        ["abstractTitle", "receiptTitle"].forEach(id =>
+          document.getElementById(id).textContent = "Click to browse or drop a PDF here");
+        ["abstractHint", "receiptHint"].forEach(id =>
+          document.getElementById(id).textContent = "PDF only · up to 25 MB");
+        ["abstractDrop", "receiptDrop"].forEach(id =>
+          document.getElementById(id).classList.remove("has-file", "dragover"));
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submitted';
+
+      } catch (err) {
+        console.error(err);
+        alert("Submission failed: " + err.message + "\nPlease try again or contact us.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit';
+      }
+    });
+  </script>
+</body>
+
+</html>

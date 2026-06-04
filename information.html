@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Information - INAE Technology Conclave 2026</title>
+<link rel="icon" type="image/jpeg" href="assets/logos/inae.jpg" />
+<meta name="description" content="Venue, accommodation and travel information for the INAE Technology Conclave 2026 at SOA University, Bhubaneswar." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-hero neural-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-pattern" aria-hidden="true"></div>
+  <canvas class="neural-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero-inner">
+    <div class="hero-kicker">
+      <span class="dot"></span>
+      <span>11-12 July 2026 &middot; SOA University, Bhubaneswar</span>
+    </div>
+    <h1>Information</h1>
+    <p>Everything you need to plan your visit to Bhubaneswar for the conclave: venue, accommodation, and a little something about the city.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="info-tabs reveal" role="tablist" aria-label="Information sections">
+      <button class="info-tab active" data-panel="venue" role="tab" aria-selected="true"><i class="fa-solid fa-location-dot"></i>Venue</button>
+      <button class="info-tab" data-panel="accommodation" role="tab" aria-selected="false"><i class="fa-solid fa-hotel"></i>Accommodation</button>
+      <button class="info-tab" data-panel="bhubaneswar" role="tab" aria-selected="false"><i class="fa-solid fa-city"></i>About Bhubaneswar</button>
+    </div>
+
+    <!-- VENUE PANEL -->
+    <div class="info-panel active" id="venue" role="tabpanel" aria-labelledby="venue-tab">
+      <div class="venue-grid reveal">
+        <div class="venue-media">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=85.7639%2C20.2752%2C85.7840%2C20.2942&amp;layer=mapnik&amp;marker=20.28475%2C85.77395"
+            title="Map of SOA University Auditorium, Bhubaneswar"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="venue-info">
+          <h3>SOA Auditorium, Campus-2</h3>
+          <p class="addr">Siksha 'O' Anusandhan (Deemed to be University)<br/>SUM Hospital Road, Shampur, Kalinganagar,<br/>Bhubaneswar, Odisha 751029</p>
+          <ul class="venue-list">
+            <li><i class="fa-solid fa-plane-arrival"></i><span><b>Biju Patnaik International Airport (BBI)</b> - ~8&nbsp;km / 20&nbsp;min by road</span></li>
+            <li><i class="fa-solid fa-train"></i><span><b>Bhubaneswar Railway Station</b> - ~10&nbsp;km / 25&nbsp;min</span></li>
+            <li><i class="fa-solid fa-car"></i><span><b>Local transport</b> - app-based cabs (Ola, Uber) and pre-paid taxis available from airport &amp; station</span></li>
+            <li><i class="fa-solid fa-circle-info"></i><span>The conclave secretariat will coordinate transport for invited speakers; delegates are encouraged to plan their own travel.</span></li>
+          </ul>
+          <div class="venue-photo">
+            <img src="assets/photos/soa1.webp" alt="SOA University campus" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCOMMODATION PANEL -->
+    <div class="info-panel" id="accommodation" role="tabpanel" aria-labelledby="accommodation-tab">
+      <div class="reveal" style="max-width:880px">
+        <p class="section-lead" style="margin-bottom:24px">Invited delegates and presenters are recommended to book suitable accommodation at their discretion. The following hotels are located near the venue.</p>
+      </div>
+      <div class="themes-grid reveal" style="grid-template-columns:repeat(2, 1fr)">
+        <div class="theme-card">
+          <div class="theme-icon"><i class="fa-solid fa-hotel"></i></div>
+          <h3>Hotel Jayadeep</h3>
+          <p style="margin-bottom:12px">K-8, opposite SUM Ultimate Medicare, 1230, Ghatikia, Kalinganagar, Bhubaneswar, Odisha 751029</p>
+          <p style="font-size:13px;color:var(--muted);margin:0"><i class="fa-solid fa-location-dot" style="color:var(--saffron);margin-right:6px"></i>Walking distance from the venue</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon"><i class="fa-solid fa-hotel"></i></div>
+          <h3>The Greenstar Inn Premium</h3>
+          <p style="margin-bottom:12px">Plot No. 789/1328, near SUM Hospital Road, Durga Madhab Nagar, Shampur, Bhubaneswar, Odisha 751029</p>
+          <p style="font-size:13px;color:var(--muted);margin:0"><i class="fa-solid fa-location-dot" style="color:var(--saffron);margin-right:6px"></i>Short drive from the venue</p>
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:32px;padding:24px 28px;background:var(--cream);border-left:3px solid var(--pink);border-radius:0 6px 6px 0;max-width:880px">
+        <p style="margin:0;color:var(--ink-2);font-size:14.5px"><b style="color:var(--navy);font-family:var(--serif)">Booking tip:</b> July is shoulder-season for Bhubaneswar. Reserve early to lock in availability close to the venue; the conclave secretariat is happy to share a list of preferred-rate properties on request.</p>
+      </div>
+    </div>
+
+    <!-- ABOUT BHUBANESWAR PANEL -->
+    <div class="info-panel" id="bhubaneswar" role="tabpanel" aria-labelledby="bhubaneswar-tab">
+      <div class="reveal" style="max-width:880px;margin:0 auto 32px">
+        <p class="section-lead" style="text-align:center">Nestled in Odisha, Bhubaneswar — the <em>Temple City of India</em> — blends over 2,000 years of Kalinga heritage with a thriving Smart City and premier academic institutions. Here's a glimpse of what awaits you.</p>
+      </div>
+
+      <!-- Slideshow -->
+      <div class="bbsr-slideshow reveal" id="bbsrSlideshow">
+        <div class="bbsr-track" id="bbsrTrack">
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image7.jpeg);background-size:cover;background-position:center">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Bhubaneswar Old Town</div>
+              <h3>Lingaraj Temple</h3>
+              <p>One of the oldest and grandest temples in India, dedicated to Lord Shiva and dating to the 11th century — the crowning jewel of Kalinga architecture, soaring above a sacred enclosure of 150 smaller shrines.</p>
+            </div>
+          </div>
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image8.jpeg);background-size:cover;background-position:center">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Old Town, Bhubaneswar</div>
+              <h3>The Temple City</h3>
+              <p>Bhubaneswar once had over 7,000 temples. Today it preserves a remarkable living heritage — Mukteswar, Rajarani, Ananta Vasudeva and dozens more — spanning the 7th to 13th centuries.</p>
+            </div>
+          </div>
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image13.jpeg);background-size:cover;background-position:center">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Dhauli, Bhubaneswar</div>
+              <h3>Dhauli Shanti Stupa</h3>
+              <p>On this hill in 261 BCE, Emperor Ashoka witnessed the devastation of the Kalinga War and turned to Buddhism. The gleaming Indo-Japanese Peace Pagoda stands as a symbol of harmony, with panoramic views over the plains.</p>
+            </div>
+          </div>
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image4.jpeg);background-size:cover;background-position:center top">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Konark, Odisha · 65 km from venue</div>
+              <h3>Konark Sun Temple</h3>
+              <p>A UNESCO World Heritage Site built in the 13th century in the form of a colossal stone chariot dedicated to the Sun God — one of the finest examples of medieval Indian craftsmanship.</p>
+            </div>
+          </div>
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image6.jpeg);background-size:cover;background-position:center">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Konark Sun Temple · East Entrance</div>
+              <h3>The Golden Triangle</h3>
+              <p>Bhubaneswar, Puri and Konark form Odisha's celebrated "Golden Triangle" — landmarks within 2 hours of each other, drawing visitors for heritage, beaches and the world-famous Rath Yatra festival.</p>
+            </div>
+          </div>
+
+          <div class="bbsr-slide" style="background-image:url(assets/photos/bbsr-image5.jpeg);background-size:cover;background-position:center">
+            <div class="bbsr-slide-overlay"></div>
+            <div class="bbsr-slide-body">
+              <div class="bbsr-tag"><i class="fa-solid fa-location-dot"></i> Konark Sun Temple · Chariot Wheel</div>
+              <h3>Stone Sundials of Konark</h3>
+              <p>The 24 intricately carved stone wheels of the Sun Temple are functional sundials — each spoke marks an interval of time, demonstrating the precision and vision of ancient Odishan craftsmen.</p>
+            </div>
+          </div>
+
+        </div>
+        <button class="bbsr-prev" id="bbsrPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="bbsr-next" id="bbsrNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="bbsr-dots" id="bbsrDots"></div>
+      </div>
+
+      <!-- Info cards -->
+      <div class="themes-grid reveal" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
+        <div class="theme-card">
+          <div class="theme-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Heritage &amp; Temples</h3>
+          <p>Over 700 temples spanning the 7th–13th centuries dot the Old Town. Lingaraj, Mukteswar, Rajarani and Parasurameswar are all within a short drive of the venue.</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Knowledge Hub</h3>
+          <p>Home to IIT Bhubaneswar, AIIMS, NISER, CSIR-IMMT, ICT-IOC and SOA University — one of India's fastest-growing centres for education, research and technology.</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon"><i class="fa-solid fa-route"></i></div>
+          <h3>Day Trips</h3>
+          <p>Konark Sun Temple (UNESCO) and Puri's beachfront are 1.5–2 hours away. The Odisha State Museum and Tribal Art Museum are excellent half-day options within the city.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <style>
+    .bbsr-slideshow{position:relative;width:100%;max-width:880px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 12px 40px -16px rgba(0,0,0,.35)}
+    .bbsr-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    .bbsr-slide{min-width:100%;height:420px;position:relative;display:flex;align-items:flex-end;background-color:#1a1f4e}
+    .bbsr-slide-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.08) 0%,rgba(0,0,0,.68) 100%)}
+    .bbsr-slide-body{position:relative;z-index:1;padding:28px 32px 32px;width:100%}
+    .bbsr-tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .bbsr-slide-body h3{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:700;color:#fff;margin:0 0 10px;line-height:1.2}
+    .bbsr-slide-body p{font-size:14px;color:rgba(255,255,255,.85);margin:0;line-height:1.6;max-width:640px}
+    .bbsr-prev,.bbsr-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.25);color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;transition:background .2s;z-index:2}
+    .bbsr-prev:hover,.bbsr-next:hover{background:rgba(0,0,0,.75)}
+    .bbsr-prev{left:12px}
+    .bbsr-next{right:12px}
+    .bbsr-dots{position:absolute;bottom:12px;right:16px;display:flex;gap:6px;z-index:2}
+    .bbsr-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .2s,transform .2s}
+    .bbsr-dot.active{background:#fff;transform:scale(1.25)}
+    </style>
+
+    <script>
+    (function(){
+      var track=document.getElementById('bbsrTrack');
+      var slides=track?track.children:[];
+      var dotsEl=document.getElementById('bbsrDots');
+      var cur=0,total=slides.length,timer;
+      if(!track||!total)return;
+      for(var i=0;i<total;i++){var d=document.createElement('div');d.className='bbsr-dot'+(i===0?' active':'');d.dataset.i=i;dotsEl.appendChild(d);}
+      function go(n){cur=(n%total+total)%total;track.style.transform='translateX(-'+cur*100+'%)';[].forEach.call(dotsEl.children,function(d,i){d.classList.toggle('active',i===cur);});}
+      document.getElementById('bbsrPrev').onclick=function(){go(cur-1);reset();};
+      document.getElementById('bbsrNext').onclick=function(){go(cur+1);reset();};
+      dotsEl.addEventListener('click',function(e){if(e.target.dataset.i!=null){go(+e.target.dataset.i);reset();}});
+      function reset(){clearInterval(timer);timer=setInterval(function(){go(cur+1);},5000);}
+      reset();
+    })();
+    </script>
+
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="components.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

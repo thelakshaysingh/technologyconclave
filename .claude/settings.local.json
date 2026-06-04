@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx --version)",
+      "Bash(curl -s -L -X POST https://script.google.com/macros/s/AKfycbztJgBczBk9fYqelMJwm9UYGVRFdRiMwOxjMp46x69hMVrB6ewu0NWy7txHk8KMXpzn/exec -H 'Content-Type: application/json' -d '{\"category\":\"abstract\",\"name\":\"Test\",\"email\":\"test@test.com\",\"phone\":\"9999999999\",\"affiliation\":\"Test Inst\",\"discipline\":\"Civil Engineering\",\"submissionTitle\":\"Test Title\",\"beneficiaryName\":\"Test\",\"accountNumber\":\"123456\",\"bankName\":\"SBI\",\"ifscCode\":\"SBIN0001\",\"transactionId\":\"TXN123\",\"abstractFileName\":\"test.pdf\",\"abstractBase64\":\"JVBERi0=\",\"receiptFileName\":\"receipt.pdf\",\"receiptBase64\":\"JVBERi0=\"}')",
+      "Bash(curl -s -L -X POST https://script.google.com/macros/s/AKfycbxKkHncE4tIoUmyFfySxHCAez7KCetxJlDlqnxrvuBTa4L30s9_YSY4fLRywqtyvTuL/exec -H 'Content-Type: application/json' -d '{\"test\":true}')",
+      "Bash(curl -s -L -X POST https://script.google.com/macros/s/AKfycbx6hmiILNVHr1u98lbyKsRgxFrsq6t0zwPwQtP6iFes5KdjpsVrrGheI8mwVJo1lNo/exec -H 'Content-Type: application/json' -d '{\"category\":\"startup\",\"firmName\":\"Test\",\"contactName\":\"Test Person\",\"email\":\"test@test.com\",\"phone\":\"9999999999\",\"pan\":\"\",\"gst\":\"\",\"submissionTitle\":\"Test\",\"proposalFileName\":\"test.pdf\",\"proposalBase64\":\"JVBERi0xLjQKJeLjz9MK\",\"receiptFileName\":\"receipt.pdf\",\"receiptBase64\":\"JVBERi0xLjQKJeLjz9MK\"}')",
+      "Bash(python3 -c \"import sys; t=sys.stdin.read\\(\\); print\\(t[:300] if '<html' in t else t\\)\")"
+    ]
+  }
+}

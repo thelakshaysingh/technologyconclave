@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit Startup Display - INAE Technology Conclave 2026</title>
+  <link rel="icon" type="image/jpeg" href="assets/logos/inae.jpg" />
+  <meta name="description" content="Submit your startup display proposal for the 2nd INAE Technology Conclave 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero neural-hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <canvas class="neural-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="page-hero-inner">
+      <div class="hero-kicker">
+        <span class="dot"></span>
+        <span>11-12 July 2026 &middot; SOA University, Bhubaneswar</span>
+      </div>
+      <h1>Submit Startup Display</h1>
+      <p>Submit your start-up display proposal for the 2nd INAE Technology Conclave 2026.
+        All submissions will be acknowledged and notified by 5 July 2026.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="reveal" style="max-width:760px;margin:0 auto 32px;text-align:center">
+        <div class="eyebrow" style="justify-content:center"><span class="bar"></span>Submission Form</div>
+        <h2 class="h2" style="font-size:32px">Upload your proposal</h2>
+        <p class="section-lead" style="margin:0 auto">Complete the form below and attach your proposal PDF. Submissions
+          are reviewed by the INAE Technology Conclave 2026 Program Committee.</p>
+      </div>
+
+      <form class="form-grid reveal" id="submitForm" novalidate data-ajax-submit="true">
+
+        <!-- Row 1: Firm + Contact Person + Email -->
+        <div class="form-row two">
+          <div>
+            <label for="f-firm-name">Name of the Firm<span class="req">*</span></label>
+            <input type="text" id="f-firm-name" name="firmName" required autocomplete="organization"
+              placeholder="xyz Pvt. Ltd." />
+          </div>
+          <div>
+            <label for="f-contact-name">Contact Person Name<span class="req">*</span></label>
+            <input type="text" id="f-contact-name" name="contactName" required autocomplete="name"
+              placeholder="Prof. / Dr. / Mr. / Ms. Full Name" />
+          </div>
+          <div>
+            <label for="f-email">Email ID<span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" required autocomplete="email"
+              placeholder="you@institution.ac.in" />
+          </div>
+        </div>
+
+        <!-- Row 2: Phone + PAN + GST -->
+        <div class="form-row two">
+          <div>
+            <label for="f-phone">Contact Number<span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" required autocomplete="tel" placeholder="+91 ..." />
+          </div>
+          <div>
+            <label for="f-pan">PAN Number</label>
+            <input type="text" id="f-pan" name="pan" placeholder="ABCDE1234F"
+              pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" maxlength="10" />
+          </div>
+          <div>
+            <label for="f-gst">GST Number</label>
+            <input type="text" id="f-gst" name="gst" placeholder="12ABCDE1234F1Z5" maxlength="15" />
+          </div>
+        </div>
+
+        <!-- Submission Title -->
+        <div class="form-row">
+          <label for="f-title">Submission Title<span class="req">*</span></label>
+          <input type="text" id="f-title" name="title" required placeholder="Title of your start-up display" />
+        </div>
+
+        <!-- Proposal PDF (single upload) -->
+        <div class="form-row">
+          <label>Startup Display Proposal (PDF)<span class="req">*</span></label>
+          <div class="file-drop" id="proposalDrop" tabindex="0" role="button" aria-label="Upload proposal PDF">
+            <i class="fa-regular fa-file-pdf"></i>
+            <div class="fd-title" id="proposalTitle">Click to browse or drop a PDF here</div>
+            <div class="fd-hint" id="proposalHint">PDF only &middot; up to 25 MB</div>
+            <input type="file" id="f-proposal" name="proposal" accept="application/pdf,.pdf" required />
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <div class="note">
+            <i class="fa-solid fa-shield-halved" style="color:var(--pink);margin-right:6px"></i>
+            Your proposal will be saved to the official INAE submission records.
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i>Submit
+          </button>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <i class="fa-solid fa-circle-check"></i>
+          <div><strong>Submission received.</strong> We will notify you by 5 July 2026.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp }                                from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getFirestore, collection, addDoc }             from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-storage.js";
+
+    // ── PASTE YOUR firebaseConfig HERE ───────────────────────────────────────
+    const firebaseConfig = {
+      apiKey:            "PASTE_YOUR_API_KEY",
+      authDomain:        "PASTE_YOUR_AUTH_DOMAIN",
+      projectId:         "PASTE_YOUR_PROJECT_ID",
+      storageBucket:     "PASTE_YOUR_STORAGE_BUCKET",
+      messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
+      appId:             "PASTE_YOUR_APP_ID"
+    };
+    // ─────────────────────────────────────────────────────────────────────────
+
+    const app     = initializeApp(firebaseConfig);
+    const db      = getFirestore(app);
+    const storage = getStorage(app);
+
+    // ── File-drop UI ─────────────────────────────────────────────────────────
+    function initDrop(dropEl, inputEl, titleEl, hintEl) {
+      function show(file) {
+        if (!file) return;
+        const isPDF = file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf");
+        if (!isPDF) {
+          titleEl.textContent = "PDF only — please choose a .pdf file";
+          hintEl.textContent  = file.name;
+          dropEl.classList.remove("has-file");
+          return;
+        }
+        titleEl.textContent = file.name;
+        hintEl.textContent  = "Ready (" + (file.size / 1048576).toFixed(2) + " MB)";
+        dropEl.classList.add("has-file");
+      }
+      dropEl.addEventListener("click", () => inputEl.click());
+      inputEl.addEventListener("change", e => show(e.target.files[0]));
+      ["dragenter","dragover"].forEach(ev =>
+        dropEl.addEventListener(ev, e => { e.preventDefault(); dropEl.classList.add("dragover"); }));
+      ["dragleave","drop"].forEach(ev =>
+        dropEl.addEventListener(ev, e => { e.preventDefault(); dropEl.classList.remove("dragover"); }));
+      dropEl.addEventListener("drop", e => {
+        const f = e.dataTransfer.files?.[0];
+        if (f) { inputEl.files = e.dataTransfer.files; show(f); }
+      });
+      dropEl.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); inputEl.click(); }
+      });
+    }
+
+    initDrop(
+      document.getElementById("proposalDrop"),
+      document.getElementById("f-proposal"),
+      document.getElementById("proposalTitle"),
+      document.getElementById("proposalHint")
+    );
+
+    // ── Upload a PDF to Firebase Storage, return download URL ────────────────
+    async function uploadPDF(file, folder) {
+      const safeName = Date.now() + "_" + file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const fileRef  = ref(storage, folder + "/" + safeName);
+      await uploadBytes(fileRef, file);
+      return await getDownloadURL(fileRef);
+    }
+
+    // ── Submit handler ────────────────────────────────────────────────────────
+    document.getElementById("submitForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const proposalFile = document.getElementById("f-proposal").files[0];
+      const submitBtn    = document.getElementById("submitBtn");
+
+      // Validate file
+      if (!proposalFile) {
+        const d = document.getElementById("proposalDrop");
+        d.style.borderColor = "var(--pink)";
+        document.getElementById("proposalTitle").textContent = "Please attach your proposal PDF";
+        return;
+      }
+      if (proposalFile.size > 25 * 1024 * 1024) { alert("Proposal PDF exceeds 25 MB"); return; }
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Uploading…';
+
+      try {
+        // Upload PDF
+        const proposalURL = await uploadPDF(proposalFile, "startup-proposals");
+
+        // Save form data + PDF link to Firestore
+        await addDoc(collection(db, "startup-submissions"), {
+          submittedAt:     new Date().toISOString(),
+          firmName:        document.getElementById("f-firm-name").value.trim(),
+          contactName:     document.getElementById("f-contact-name").value.trim(),
+          email:           document.getElementById("f-email").value.trim(),
+          phone:           document.getElementById("f-phone").value.trim(),
+          pan:             document.getElementById("f-pan").value.trim(),
+          gst:             document.getElementById("f-gst").value.trim(),
+          submissionTitle: document.getElementById("f-title").value.trim(),
+          proposalPDF:     proposalURL
+        });
+
+        // Success
+        document.getElementById("formSuccess").style.display = "flex";
+        document.getElementById("submitForm").reset();
+        document.getElementById("proposalTitle").textContent = "Click to browse or drop a PDF here";
+        document.getElementById("proposalHint").textContent  = "PDF only · up to 25 MB";
+        document.getElementById("proposalDrop").classList.remove("has-file","dragover");
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submitted';
+
+      } catch (err) {
+        console.error(err);
+        alert("Submission failed: " + err.message + "\nPlease try again or contact us.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit';
+      }
+    });
+  </script>
+</body>
+</html>
